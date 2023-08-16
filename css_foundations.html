@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Foundations</title>
+    </head>
+    <body><h3>CSS Foundations</h3>
+        CSS is made of rules these are the selector and a semi-colon separated list declarations, with each of those declarations been made up of a property:value pair
+        <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg" target="Basic syntax">
+        <h4>Selectors</h4>
+        Selectors refer to the html element to which the CSS rules apply. The following list are the most common:
+        <h5>Universal Selector</h5>
+        This will select elements of any type and the syntax(structure) is an asterisk. In the below example every element would have the color: purple; stye applied to it.
+        <img src="../html_css_notes/images/universal-selector.png" target="uni-selector" width="700" height="175">
+        <h5>Type Selectors</h5>
+        A type selector will select all elements of the given element type. The syntax would be the given element. The example belows shows that < div > would be selected and not < p >
+        <img src="../html_css_notes/images/type-selector.png" target="type" width="650" height="415">
+        <h5>Class Selectors</h5>
+        These will select anything made using < div class >in the given quotations. The first example shows the adding of a class and the second is the class selector.
+        <img src="../html_css_notes/images/class-selector.png" target="class selector" width="700" height="325"> 
+        <p></p>The syntax is a period immediately followed by the class attribute (the case sensitive quoted word). This example it would be alert-text. You can also add multiple classes to the attribute listed with just a space.
+        <h5>ID Selectors</h5>
+        These are similar to class selectors, the difference is that an element can only have one ID. Using < div id ="" and a #"" instead of a full stop.
+        <img src="../html_css_notes/images/id-selector.png" target="ID selector" width="675" height="300">
+        <p>Don't overuse these, can use class instead.</p>
+        <h5>The Grouping Selector</h5>
+        If two or more groups of elements share some of the same style declarations then we can use a comma-seperated list to cut down on repetition.
+        <img src="../html_css_notes/images/grouping-selector1.png" target="grouping selector example 1" width="675" height="340">
+        <p></p>
+        <img src="../html_css_notes/images/grouping-selector2.png" target="grouping selector example 2" width="700" height="400">
+        <p>Both of the examples above have the same effect, it condenses the code and makes it easier to edit color/background color for both at once.</p>
+
+
+    </body> 
+</html>
