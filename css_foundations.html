@@ -40,6 +40,34 @@
         <p>So .ancestor .child would only select an element with the class .child as long as .ancestor came before it and would ignore all the .child on their own or without an ancestor</p>
         <img src="../html_css_notes/images/descendant-combinator.png" target="descendant combinator" width="700" height="550">
         <p>So only class B and C would have been selected in the above example. There’s really no limit to how many combinators you can add to a rule, so .one .two .three .four would be totally valid. This would just select an element that has a class of four if it has an ancestor with a class of three, and if that ancestor has its own ancestor with a class of two, and so on. You generally want to avoid trying to select elements that need this level of nesting, though, as it can get pretty confusing and long, and it can cause issues when it comes to specificity.</p>
-        
+        <h3>Commonly used properties</h3>
+        <h5>Color and background-color</h5>
+        Color sets the element text color and the background-color sets the color of the background. Both of these properties can accept several values, including HEX RGB and HSL value which look like:     color: #1100ff;     color: rgb(100, 0, 127);      color: hsl(15, 82%, 56%);
+        Use <a href="https://www.w3schools.com/cssref/css_colors_legal.asp">this</a> link to refer to the different colors and ways they can be implemented.
+        <h5>Typography basics and text-align</h5>
+        font-family   can be a single value or a comma separated list of values. Each font can will fall into two categories, either a "font family name" wrapped in quotes due to the whitespace or a generic family name which uses hyphens if necessary eg "Times New Roman" and sans-serif. If a browser dos'nt support the font then it will use the next supported one. Using the values starting with the font you want to be used the most and ending with a generic font family as a fallback.
+        <p>font-size 22px     will set the size of the font, making sure there is no whitespace between the 22 and px</p><p>font-weight     affects boldness pending font support. This can be a keyword or a number 1 and 1000 eg font-weight: bold      font-weight: 700</p>
+        <p>text-align      aligns text within an element eg text-align: center</p>
+        <h5>Image height and width</h5>
+        If you want to adust an images height and width without messing up proprtions, you would use the valu "auto" eg
+        <p>img {</p>
+            <p>height: auto</p>
+            <p>width: 500px;</p>
+            <p>}</p>
+        <p>Explicitly stating a height and width will stop drastic shift of the page when an image loads in later.</p>
+        <h4>Adding it all to CSS to HTML</h4>
+        There are three ways to add the above to HTML.
+        <h5>External CSS</h5>
+        This is the most common method and involves creating a separate CSS file. 
+        <p><img src="../html_css_notes/images/external-css.png" target="external css" width="700" height="500"></p>
+        <p>In the head of the HTML we add the href attribute containing the location of the CSS file and the HTML file itself. The rel attribute is needed to specify the relationship. The name of the CSS file can be anything but style.css is a very common one. Pros are that it keeps things neat and stops the original HTML from bloating.</p>
+        <h5>Internal CSS</h5>
+        This involves adding the CSS into the HTML directly. The syntax is exaclty the same but uses no rel or links.
+        <h5>Inline CSS</h5>
+        This makes it possible to add styles directly to HTML elements though it is not recommended as the code writing becomes quite a lot different ie no selectors. 
+        < body>
+  < div style="color: white; background-color: black;">...</div>
+</ body >It can work just fine if you want to change the style for one or two elements but can quickly become confusing and bloated. 
+
     </body> 
 </html>
