@@ -1,0 +1,15 @@
+* {
+    background-color: lightblue;
+}
+
+.titles {
+font-size: 32px;
+font-weight: 700;
+font-stretch: expanded;
+text-align: center ;
+}
+
+.sub-headers {
+    font-size: 22px;
+    font-weight: 700;
+    }

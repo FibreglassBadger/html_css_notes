@@ -34,7 +34,7 @@
         <img src="../html_css_notes/images/chaining-selectors1.png" target="chaining selector example 1" width="600" height="150">
         <p>You can do the same with the id class by just placing a # before instead of a full stop:</p>
         <img src="../html_css_notes/images/chaining-selectors2.png" target="chaining selector example 2" width="600" height="470">
-        <p>In general, you can’t chain more than one type selector since an element can’t be two different types at once. For example, chaining two type selectors like div and p would give us the selector divp, which wouldn’t work since the selector would try to find a literal < divp > element, which doesn’t exist.</p>
+        <p>In general, you can’t chain more than one <strong>type</strong> selector (different to class) since an element can’t be two different types at once. For example, chaining two type selectors like div and p would give us the selector divp, which wouldn’t work since the selector would try to find a literal < divp > element, which doesn’t exist.</p>
         <h5>Descendant Combinator</h5>
         Combinators allow us to combine multiple selectors at once, differently than chaining or grouping. There are four types of combinators but are only going to focus on Descendant. This selector will only work if they have an ancestor (parent, child, grandparent etc) that matches the previous selector.
         <p>So .ancestor .child would only select an element with the class .child as long as .ancestor came before it and would ignore all the .child on their own or without an ancestor</p>
@@ -66,8 +66,25 @@
         <h5>Inline CSS</h5>
         This makes it possible to add styles directly to HTML elements though it is not recommended as the code writing becomes quite a lot different ie no selectors. 
         < body>
-  < div style="color: white; background-color: black;">...</div>
-</ body >It can work just fine if you want to change the style for one or two elements but can quickly become confusing and bloated. 
+        < div style="color: white; background-color: black;">...</div>
+        </ body >It can work just fine if you want to change the style for one or two elements but can quickly become confusing and bloated. 
+        <h3>The Cascade</h3>
+    Unexpected behaviors can occur even when your code is perfect, this can be due to the browser default settings and the fact that every browser runs things slightly differently from one another. The cascade is what determines what rules actually get applied and there are factors that CSS uses to do this. Three of the factors are:
+    <h4>Specificity</h4>
+     In simple terms the more specific a CSS declaration becomes the more it will take over broad ones. From the selectors that have been learnt so far the hierarchy goes:
+     <ol>
+        <li> ID Selectors</li>
+        <li> Class Selectors</li>
+        <li> Type Selectors</li>
+     </ol>
+    A declaration with two class selectors will be chosen over one, and one with an ID selector will take precedence over the two class. The combinator does not add anything to specificity so that combined with a chaining selector would produce the same specificity. The universal-selector * has no specificity so is beaten by everything.
+    <img src="../html_css_notes/images/specificity.png" width="550" height="750">
+
+    <h4>Inheritance</h4>
+    Most elements will inherit Typography based properties eg color, font-size, font-family etc unless we typically target them not to. Most other properties aren't automatically inherited.
+    <h4>Rule Order</h4>
+    When there is absolutely no other specificity and the declarations at he exact same, then CSS will apply the last rule that was defined. So in this example yellow would be applied.
+    <img src="../html_css_notes/images/rule-order.png" width="700" height="310">
 
     </body> 
 </html>
