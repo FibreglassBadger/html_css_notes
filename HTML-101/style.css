@@ -1,23 +1,22 @@
 * {
-    background-color: lightgoldenrodyellow;
+    background-color: lightblue;
 }
-
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-h3 {
-    font-size: 32px;
-    font-weight: 700;
-font-stretch: expanded;
-text-align: center 
-}
-h4 {
-    font-size: 28px;
+
+.titles {
+font-size: 32px;
+font-weight: 700;
+font-stretch: ex.sub-headers panded;
+text-align: center ;
 }
 
 .sub-headers {
     font-size: 22px;
     font-weight: 700;
     }
-
+p {
+    
+}

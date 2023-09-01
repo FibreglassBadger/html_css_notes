@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <title>CSS Foundations</title>
     </head>
     <body><h3>CSS Foundations</h3>
         CSS is made of rules these are the selector and a semi-colon separated list declarations, with each of those declarations been made up of a property:value pair
         <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg" target="Basic syntax">
-        <h4>Selectors</h4>
+        <h5>Selectors</h5>
         Selectors refer to the html element to which the CSS rules apply. The following list are the most common:
         <h5>Universal Selector</h5>
         This will select elements of any type and the syntax(structure) is an asterisk. In the below example every element would have the color: purple; stye applied to it.
-        <img src="../html_css_notes/images/universal-selector.png" target="uni-selector" width="700" height="175">
+        <img src="../css-foundations/images/universal-selector.png" target="uni-selector" width="700" height="175">
         <h5>Type Selectors</h5>
         A type selector will select all elements of the given element type. The syntax would be the given element. The example belows shows that < div > would be selected and not < p >
-        <img src="../html_css_notes/images/type-selector.png" target="type" width="650" height="415">
+        <img src="../css-foundations/images/type-selector.png" target="type" width="650" height="415">
         <h5>Class Selectors</h5>
         These will select anything made using < div class >in the given quotations. The first example shows the adding of a class and the second is the class selector.
-        <img src="../html_css_notes/images/class-selector.png" target="class selector" width="700" height="325"> 
+        <img src="../css-foundations/images/class-selector.png" target="class selector" width="700" height="325"> 
         <p></p>The syntax is a period immediately followed by the class attribute (the case sensitive quoted word). This example it would be alert-text. You can also add multiple classes to the attribute listed with just a space.
         <h5>ID Selectors</h5>
         These are similar to class selectors, the difference is that an element can only have one ID. Using < div id ="" and a #"" instead of a full stop.
-        <img src="../html_css_notes/images/id-selector.png" target="ID selector" width="675" height="300">
+        <img src="../css-foundations/images/id-selector.png" target="ID selector" width="675" height="300">
         <p>Don't overuse these, can use class instead.</p>
         <h5>The Grouping Selector</h5>
         If two or more groups of elements share some of the same style declarations then we can use a comma-seperated list to cut down on repetition.
-        <img src="../html_css_notes/images/grouping-selector1.png" target="grouping selector example 1" width="675" height="340">
+        <img src="../css-foundations/images/grouping-selector1.png" target="grouping selector example 1" width="675" height="340">
         <p></p>
-        <img src="../html_css_notes/images/grouping-selector2.png" target="grouping selector example 2" width="700" height="400">
+        <img src="../css-foundations/images/grouping-selector2.png" target="grouping selector example 2" width="700" height="400">
         <p>Both of the examples above have the same effect, it condenses the code and makes it easier to edit color/background color for both at once.</p>
         <h5>Chaining Selectors</h5>
         Selectors can be chained together as a list without any separation using a fullstop as before. For example if you had two classes that looked liked "div class="subsection header">Latest Posts< /div" and "p class="subsection preview". So if you wanted to apply a rule with classes that included subsection and header then the following syntax would look like:
-        <img src="../html_css_notes/images/chaining-selectors1.png" target="chaining selector example 1" width="600" height="150">
+        <img src="../css-foundations/images/chaining-selectors1.png" target="chaining selector example 1" width="600" height="150">
         <p>You can do the same with the id class by just placing a # before instead of a full stop:</p>
-        <img src="../html_css_notes/images/chaining-selectors2.png" target="chaining selector example 2" width="600" height="470">
+        <img src="../css-foundations/images/chaining-selectors2.png" target="chaining selector example 2" width="600" height="470">
         <p>In general, you can’t chain more than one <strong>type</strong> selector (different to class) since an element can’t be two different types at once. For example, chaining two type selectors like div and p would give us the selector divp, which wouldn’t work since the selector would try to find a literal < divp > element, which doesn’t exist.</p>
         <h5>Descendant Combinator</h5>
         Combinators allow us to combine multiple selectors at once, differently than chaining or grouping. There are four types of combinators but are only going to focus on Descendant. This selector will only work if they have an ancestor (parent, child, grandparent etc) that matches the previous selector.
         <p>So .ancestor .child would only select an element with the class .child as long as .ancestor came before it and would ignore all the .child on their own or without an ancestor</p>
-        <img src="../html_css_notes/images/descendant-combinator.png" target="descendant combinator" width="700" height="550">
+        <img src="../css-foundations/images/descendant-combinator.png" target="descendant combinator" width="700" height="550">
         <p>So only class B and C would have been selected in the above example. There’s really no limit to how many combinators you can add to a rule, so .one .two .three .four would be totally valid. This would just select an element that has a class of four if it has an ancestor with a class of three, and if that ancestor has its own ancestor with a class of two, and so on. You generally want to avoid trying to select elements that need this level of nesting, though, as it can get pretty confusing and long, and it can cause issues when it comes to specificity.</p>
-        <h3>Commonly used properties</h3>
+        <h5>Commonly used properties</h5>
         <h5>Color and background-color</h5>
         Color sets the element text color and the background-color sets the color of the background. Both of these properties can accept several values, including HEX RGB and HSL value which look like:     color: #1100ff;     color: rgb(100, 0, 127);      color: hsl(15, 82%, 56%);
         Use <a href="https://www.w3schools.com/cssref/css_colors_legal.asp">this</a> link to refer to the different colors and ways they can be implemented.
@@ -55,11 +56,11 @@
             <p>width: 500px;</p>
             <p>}</p>
         <p>Explicitly stating a height and width will stop drastic shift of the page when an image loads in later.</p>
-        <h4>Adding it all to CSS to HTML</h4>
+        <h5>Adding it all to CSS to HTML</h5>
         There are three ways to add the above to HTML.
         <h5>External CSS</h5>
         This is the most common method and involves creating a separate CSS file. 
-        <p><img src="../html_css_notes/images/external-css.png" target="external css" width="700" height="500"></p>
+        <p><img src="../css-foundations/images/external-css.png" target="external css" width="700" height="500"></p>
         <p>In the head of the HTML we add the href attribute containing the location of the CSS file and the HTML file itself. The rel attribute is needed to specify the relationship. The name of the CSS file can be anything but style.css is a very common one. Pros are that it keeps things neat and stops the original HTML from bloating.</p>
         <h5>Internal CSS</h5>
         This involves adding the CSS into the HTML directly. The syntax is exaclty the same but uses no rel or links.
@@ -68,9 +69,9 @@
         < body>
         < div style="color: white; background-color: black;">...</div>
         </ body >It can work just fine if you want to change the style for one or two elements but can quickly become confusing and bloated. 
-        <h3>The Cascade</h3>
+        <h5>The Cascade</h5>
     Unexpected behaviors can occur even when your code is perfect, this can be due to the browser default settings and the fact that every browser runs things slightly differently from one another. The cascade is what determines what rules actually get applied and there are factors that CSS uses to do this. Three of the factors are:
-    <h4>Specificity</h4>
+    <h5>Specificity</h5>
      In simple terms the more specific a CSS declaration becomes the more it will take over broad ones. From the selectors that have been learnt so far the hierarchy goes:
      <ol>
         <li> ID Selectors</li>
@@ -78,13 +79,19 @@
         <li> Type Selectors</li>
      </ol>
     A declaration with two class selectors will be chosen over one, and one with an ID selector will take precedence over the two class. The combinator does not add anything to specificity so that combined with a chaining selector would produce the same specificity. The universal-selector * has no specificity so is beaten by everything.
-    <img src="../html_css_notes/images/specificity.png" width="550" height="750">
+    <img src="../css-foundations/images/specificity.png" width="550" height="750">
 
-    <h4>Inheritance</h4>
-    Most elements will inherit Typography based properties eg color, font-size, font-family etc unless we typically target them not to. Most other properties aren't automatically inherited.
-    <h4>Rule Order</h4>
-    When there is absolutely no other specificity and the declarations at he exact same, then CSS will apply the last rule that was defined. So in this example yellow would be applied.
-    <img src="../html_css_notes/images/rule-order.png" width="700" height="310">
+    <h5>Inheritance</h5>
+    <p>Most elements will inherit Typography based properties eg color, font-size, font-family etc unless we typically target them not to. Most other properties aren't automatically inherited.</p>
+    <h5>Rule Order</h5>
+    <p>When there is absolutely no other specificity and the declarations at he exact same, then CSS will apply the last rule that was defined. So in this example yellow would be applied.</p>
+   
+    <img src="../css-foundations/images/rule-order.png" width="700" height="310">
 
+    <h5>Inspecting HTML and CSS</h5>
+    <p>Inspecting and debugging your frontend code is critical to development.
+    </p>
+    <h3>The Inspector</h3>
+    You can right click anywhere on a webpage and inspector the element. When an element is selected the styles tab will show all the currently applied styles. This tab also allows you to edit the web page in real time. It is extremely useful for testing out code without having to reload the webpage over and over. This dosnt actually change the source code.
     </body> 
 </html>

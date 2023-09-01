@@ -1,118 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
-        <title>My HTML and CSS notes webpage</title>
+        <title>Index</title>
     </head>
+    <body>
+        <h3>My Early Days of Codeing and Web Development</h3>
+    <h4><ul>
+        <li><a href="../html_css_notes/HTML-101/HTML-101.html">HTML 101</a></li>
+        <li><a href="../html_css_notes/css-foundations/css_foundations.html">CSS Foundations</a></li>
+    </ul></h4>
 
-    <body><div class="titles"><h3>My HTML and CSS notes webpage</h3></div>
-        HTML puts information on a web page, and CSS positions that information, gives it color, changes the font, and makes it look great!
 
-        <p>HTML builds the structure</p>
-        
-        <p>CSS helps you tweak HTML, altering layout, style and presentation</p>
-        
-        <p>Java pushes the interactivity for a more modern audience. JavaScript can change structure of both HTML and CSS. Almost limitless possibilities</p>
-        
-        <p>If you want to focus primarily on improving the front-end elements of your website, the most important languages to learn include HTML5, CSS3, Bootstrap, and JavaScript. As for the back-end, you should consider learning languages like Python, Ruby, and PHP.</p>
-        
-        <p>HTML uses elements in the form of tags, here's a good list of all the tags and what they do:</p>
-        
-        <a href="http://developer.Mozilla.org/docs/Web/HTML/Element">http://developer.Mozilla.org/docs/Web/HTML/Element</a>
-        
-        
-        <p class="sub-headers">The Basics</p>
-        
-        
-        < h1 > to < h6 > makes the words larger to smaller
-        
-        <p>  < p > is used to create paragraphs, break up sentences</p>
-        
-        < em > places <em>italics</em>
-        <p>< strong > puts text in <strong>bold</strong></p>
-        
-        
-        
-        
-        For example
-        <p>Lorem ipsum dolor sit amet, < em > <em>consectetur adipiscing elit</em> < em >, sed do < strong > <strong>eiusmod</strong> < strong >tempor
-           incididunt ut labore et dolore magna aliqua.</p>
-        
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-           nisi ut aliquip ex ea commodo consequat.</p>
-        
-        
-        
-        
-        <p class="sub-headers">Lists</p>
-           Unordered list are made using the < ul > element and each item starting and ending with < li >
-           this will bullet point the lines
-        
-        
-        <p>ordered lists are created with < ol > where the order <em>does</em> matter
-           and it will number the lines instead of bullet pointing them</p>
-        <  ol ><ol>
-          <p>< li >Item 1</li>< li > </p>
-          <p>< li >Item 2</li>< li > </p>
-          <p>< li >Item 3</li>< li > </p>
-        < /ol ></ol>
-        <p>makes</p>
-        <ol><ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-          </ol>
-    
-        <p class="sub-headers">Images and Links</p>
-        <p>Anchor elements are used to create links < a >for example< /a ></p>
-        <p>It needs a HTML attribute which is usually made up of two parts, a name and a value. This example uses a href hyperlink reference. The value of the href attribute is the destination the link goes.
-        <p>For example
-        < a href="https://www.theodinproject.com/about">click me< /a ></p>
-        
-        <p>Anchor tags can be used to link all kinds of resources from the web ie images videos etc</p>
-        
-        <p>The target attribute tells the link where to open. By default it will open the link in the current tab. For a new tab you can set it to _blank.</p> For example
-        
-        < a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">click me< /a ></p>
-
-        <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">click me</a></p>
-        
-        <p>Rel is used to describe the relationship between the page and the linked document.</p>
-        <p>noopener prevents access for opened link to previous page</p>
-        <p>noreferer does the same vice verser. Done as good practise even though modern securty doesnt need it.</p>
-        
-        <p>Absolute links are pages to another site and will always be made up of protocol://domain/path eg https://www.theodinproject.com/about
-        <p>Relative links are ways to navigate your own website. Can be shorter eg pages/about.html</p>
-        
-        <p class="sub-headers">Images</p> 
-        <p>To display an image in HTML we use < img > which is self closing. It uses src attribute similar to hrf. It can be embedded in absolute and relative paths.</p>
-        <p>eg  < img src="https://www.theodinproject.com/mstile-310x310.png" ></p>
-        
-        <p>alt= (Alternate) atribute must be used after the image location to decribe what the image shows, helping the visually impaired.
-        <p>eg < img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" ></p>
-        
-        <p>Parent directories- To use an image that is not in the directory of the target web page then the following must be used < img src="../images/dog.jpg">  or ../targetfile   so that it searches for it from the parent directory</p>
-        
-        <p class="sub-headers">Messages</P>
-        <p>Commit messages will be viewed by other developers working on your code to see what changes were made and why.
-            They are good for reminding you of the changes you made and why</p>
-            <p>A bad commit would be 'fix a bug' a good commit has a subject 'this is a change I made to the codebase' and body describing what your commit fixed</p>
-            The messages need to be clear and concise so that they are easy to understand.
-            <p>Commits are like snapshot of your code and its action. This should show a time line of your progression. Commit when you get a piece of code to function, fix a typo or fix a bug. There will be times when your code may completely break but going back through your commits (timeline) to before the code broke would be very helpful</p>
-            <p> The seven rules of commits are:</p>
-            <ol>
-                <li>Separate subject from body with a blank line</li>
-                <li>Limit the subject line to 50 characters</li>
-                    <li>Capitalize the subject line</li>
-                    <li>Do not end the subject line with a period</li>
-                    <li>Use the imperative mood in the subject line</li>
-                    <li>Wrap the body at 72 characters</li>
-                    <li>Use the body to explain what and why vs. how</li>
-            </ol> 
-            <p class="sub-headers">Uploading to git and making public</p>
-            To make pages viewable anywhere on the internet from github, then you must click on your specific repo from the accounts page then on the left hand side click <strong>pages</strong>. Change <strong>Branch</strong> from <em>none</em> to <em>main</em> and then click save. The page will then be found at <em>your-github-username.github.io/your-github-repo-name</em>
-            <p></p>
-        
     </body>
 </html>
