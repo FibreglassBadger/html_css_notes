@@ -1,0 +1,31 @@
+* {
+    background-color: rgb(212, 203, 251);
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+
+h3 {
+font-size: 32px;
+font-weight: 700;
+font-stretch: extra-expanded;
+text-align: center ;
+text-decoration-line: underline;
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: 700;
+    }
+p {
+    background-color: white;
+    
+}
+
+img {
+    padding: 30px;
+    
+    
+}
