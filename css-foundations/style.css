@@ -12,6 +12,7 @@ font-size: 32px;
 font-weight: 700;
 font-stretch: extra-expanded;
 text-align: center ;
+text-decoration-line: underline;
 }
 
 h5 {
@@ -20,5 +21,11 @@ h5 {
     }
 p {
     background-color: white;
+    
+}
+
+img {
+    padding: 30px;
+    
     
 }
