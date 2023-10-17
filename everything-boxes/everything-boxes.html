@@ -6,12 +6,115 @@
         <title>Everything Boxes</title>
         
     </head>
-    <body><h3>CSS Foundations</h3>
-
-
-
-    <div class="index-button">Press me to go back to Index</div>
-    </body> 
+    <body><h3>Everything Boxes</h3>
+        <h3>The Box Model</h3>
+        <p>Boxes are used for everything concerning positioning and layout. They are crucial for getting everything on a web page exactly where you want them. Everything is a rectangle box, they can have boxes within boxes, and sit along side each other. By placing borders around everything using the *   border: 2px solid red; you can see these boxes. The only real complication is that there are many ways size these boxes and the space between them using padding, margin and border.
+            <ul>
+                <li>padding - increases the space between the border of a box and the content of the box.</li>
+                    <li>margin - increases the space between the borders of a box and the borders of adjacent boxes.</li>
+                        <li>border - adds space (even if it’s only a pixel or two) between the margin and the padding.</li>
+            </ul>
+        There are two types of displays  boxes; <strong>block</strong> and <strong>inline</strong>. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an outer display and an inner display.
+        <h5>Outer type block</h5>
+            If a display has an outer display type of <strong>block</strong>, then;
+            <ul>
+                <li>the box will break into a new line</li>
+                <li>width and height properties will be expected</li>
+                <li>will cause other elements to be pushed away from it</li>
+                <li>If width is not stated, it will extend in the inline direction to fill space in the available container</li>
+            </ul>
+        Some HTML elements, such as < h1 > and < p > use block as their display default By default, block elements will appear on the page stacked atop each other, each new element starting on a new line.
     
+        <h5>Outer type inline</h5>
+        <p>If <strong>inline</strong> then:
+            <ul>
+                <li>Box will not break onto a new line</li>
+                <li>width and height properties will not apply</li>
+                <li>Top and bottom padding, margins and borders will apply but will not cause other inline boxes to move away from the box</li>
+                <li>Left and right padding, margins and borders will apply and will cause other inline boxes to move away from the box</li>
+            </ul>
+            HTML elements: a, span, em and strong use inline as their default. They appear in line with whatever elements they are placed beside. A clear example of an inline element is a link. The link’s text will sit alongside other words in that paragraph. Additionally, padding and margin behave differently on inline elements. In general, you do not want to try to put extra padding or margin on inline elements.
+            <h4>Inner</h4>
+            The inner display type dictates how elements inside that box are laid out.
+            As default and without any other instruction, the elements inside a box are also laid out in normal flow and behave as block or inline boxes. You can change the inner display type for example by setting display: flex;. This changes the inner type display to flex and keep the outer display type block.
+            <h5>Examples of different display types</h5>
+            The example below has three different HTML elements, all of which has an outer display type <strong>block</strong>:
+            <ul>
+                <li>A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and extends the entire available width.</li>
+                <li>A list, which is laid out using display: flex. This establishes flex layout for the children of the container, which are flex items. The list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.</li>
+                <li>A block-level paragraph, inside which are two < span > elements. These elements would normally be inline, however, one of the elements has a class of "block" which gets set to display: block.
+                </li>
+            </ul>
+                <img src="../css-foundations/images/outer-display-box.png" width="730" height="350">
+                <img src="../css-foundations/images/outer-display-box2.png" width="700" height="600">
+                </p>
+            This is all done by changing the value of the display to either inline or block, this in turn changes how it will be displayed next to other elements.
+            <h5>Using display: inline-block</h5>
+              display: inline-block is a special value of display, which provides a middle ground between inline and block. Use it if you do not want an item to break onto a new line, but do want it to respect width and height and avoid the overlapping seen above. The width and height properties are respected.
+              padding, margin, and border will cause other elements to be pushed away from the box.
+              It does not, however, break onto a new line, and will only become larger than its content if you explicitly add width and height properties.
+            <p>A good example of all three can be found <a href="https://www.digitalocean.com/community/tutorials/css-display-inline-vs-inline-block">here</a></p>
+    
+            <p>There are two types of boxes in CSS. The standard box and the alternate box.</p>
+            <h5>Standard box</h5>
+            If a standard box had the following properties:
+            <p>.box {
+                width: 350px;
+                height: 150px;
+                margin: 10px;
+                padding: 25px;
+                border: 5px solid black;
+              }</p>
+            The actual space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5).
+            <h5>Alternate box</h5>
+            In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border. No need to add up the border and padding to get the real size of the box.
+            <p>To turn on the alternative model for an element, set box-sizing: border-box</p>
+            <p>So if a box has the following properties: .box {
+                width: 350px;
+                inline-size: 350px;
+                height: 150px;
+                block-size: 150px;
+                margin: 10px;
+                padding: 25px;
+                border: 5px solid black;
+              }</p>
+              Now, the actual space taken up by the box will be 350px in the inline direction and 150px in the block direction.
+              <h5>Margins, padding and borders</h5>
+              <strong>MARGIN</strong>
+              The above commands that we have been using have all been shorthands and allow us to set all four sides of the box at once. These can be worked upon by simply adding top right and bottom respectively after each element:
+              <ul>
+                <li>margin-top</li>
+                <li>margin-right</li>
+                <li>margin-bottom</li>
+                <li>margin-left</li>
+              </ul>
+              These values can all be changed individually to push the box around.
+              <p>Depending on two margins which touch, they can have an impact on each other and the results will be different depending on the size:</p>
+              <p>Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin.</p>
+              <p>Two negative margins will collapse and the smallest (furthest from zero) value will be used.</p>
+              <p>If one margin is negative, its value will be subtracted from the total.</p>
+              The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
+              Click <a href="https://css-tricks.com/almanac/properties/m/margin/">here</a> for more margin stuff
+              <p><strong>BORDERS</strong></p>
+              Borders size can be adjusted each side individually just like the above. However their width, style and color can also be changed:
+              <ul>
+                <li>border-width</li>
+                <li>border-style</li>
+                <li>border-color</li>
+                <li>eg  border-top-style</li>
+              </ul>
+              <strong>PADDING</strong>
+              <p>Uses the same margin elements and allows what ever is inside the box to be pushed around, however you can not have a negative padding</p>
+              <p>All of the above applies to block boxes, but some of those can apply to inline boxes to such as ones created by a < span > element</p> You could place a span inside a paragraph and top and bottom margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The left and right padding, margins, and borders move other content away from the box.
+              <h5>Divs and spans</h5>
+              <p>These two elements can be seen as empty containers that don't effect HTML on their own, however they can be very useful.
+              <strong>Div</strong> is a block level element by default. It is commonly used as a container element to group other elements. Divs allow us to divide the page into different blocks and apply styling to those blocks.<strong>Span</strong> is an inline-level element by default. It can be used to group text content and inline HTML elements for styling and should only be used when no other semantic HTML element is appropriate.</p.>
+        
+        
+
+
+ <p> 
+<a class="text" href="../index.html">Press me to go back to Index</a>
+    </p>
     </html>
     
