@@ -1,8 +1,31 @@
 * {
-    background-color: lightblue;
+    background-color: rgb(205, 191, 183);
 }
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.block {
+    display: flex;
+    height: 300px;
+
+padding: 20px;
+margin: 20px;
+    justify-content: space-between;
+}
+.block div {
+    width: 50px;
+    height: auto;
+color: black;
+    border: 5px solid red;
+    padding-bottom: px;
+    flex: 1 ;
+
+}
+.block .two {
+    flex: 2 1 0%;
 }
 
 
@@ -17,10 +40,12 @@ text-decoration-line: underline;
 h5 {
     font-size: 22px;
     font-weight: 700;
-    }
+    margin: 20px    }
 p {
-display:inlin;
+
     background-color: white;
+    border: 5px solid re;
+    margin: 5px;
     
 }
 
@@ -36,10 +61,28 @@ img {
     border-style:dashed;
     padding: 10px;
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 40px;51.5575750, 0.1880960
     margin: 10px;
 font-weight: 700;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 25px;
     display: inline;
+}
 
+.container {
+    height: 200px;
+    padding: 16px;
+    display: flex;
+    border: 2px solid red;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+.item {
+    width: 80px;
+    height: 60px;
+    border: 2px solid purple;
+    flex: ;
+    
+}

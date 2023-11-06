@@ -8,6 +8,65 @@
     </head>
 
     <body>
-        <h3></h3>
+        <h3>Flexbox</h3>
+        <p>Flexbox is a way to arrange items into rows and columns. They will grow and shrink based on some simple rules.</p>
+        <p>< div class="flex-container"> < div class="one">< /div > </p>
+
+
+            <div class="block">
+        
+                <div class="one">
+            .flex-container div {
+              background: peachpuff;
+              border: 4px solid brown;
+              height: 100px;
+              flex: 1; 
+              
+            }
+        </div>
+              <div class="two"></div>
+              <div class="three"></div>
+        </div>
+        <h5>Flex containers and flex item</h5>
+            <p>A flex container is any element that has display: flex on it and a flex item is any element that lives directly inside if a flex container. </p>
+                <img src="../flexbox/images/flex-example.png" width="500" height="200" >
+            
+            
+        <p>The flex declaration is actually short hand for flex-grow, flex-shrink and flex-basis. The declaration flex: 1 would equate to: flex-grow 1, flex-shrink: 1 and flex-basis: 0. Quite often you'll see the flex shorthand with just the value 1, and in the case it is just applied to flex-grow, and the shorthand is specified as flex: 1 1 0</p>
+        <h5>Flex-grow</h5>
+        This expects a single number as its value and is used as the items growth factor. When applied, every div in side the container should all grow by the same exact amount. If a single div has 2 then just that div would grow by 2x the size of the others. See the attached style sheet for example.
+        <h5>Flex-shrink</h5>
+        This is similar to grow but sets the shrink factor. This only ends up being applied if all the items end up being larger than their parent container. The default shrink factor is 1 which means all items shrink evenly, if you do not want an item to shrink than you would specify flex-shrink: 0; Meaning that no matter how much you shrink the browser window, one div will never change size only the divs around it. Higher numbers can set the item to a higher shrink rate.
+        It's also important to note that even if the divs are given a specific width, they may not necessarily respect it. They will usually shrink or grow in accordance with the size of the container.
+        <p>A good way to remember it:
+            <ul>
+                <li>flex-grow controls how the extra space is distributed when the items are smaller than their container.</li>
+                <li>flex-shrink controls how space is removed when the items are bigger than their container.</li>
+            </ul>
+        </p>
+        <h5>Flex-basis</h5>
+        This simply sets the size of the initial flex item. So any growing or shrinking will start from the basis you specify. The shorthand values default is et to flex-basis: 0%.
+        <p>It is important to note that when using shorthand flex: 1, it defaults the basis to 0 which would ignore the items width and make every grow/shrink evenly. By being more specific flex: 1 1 auto you can ensure you get the right value, this is the equivalent to using flex: auto. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"><strong>THIS</strong></a> is a very good link to freshen up on knowledge. </p>
+        
+        <strong>For most purposes, authors should set flex to one of the following values: auto, initial, none, or a positive unitless number.</strong>
+        <h3>Axes and Alignment</h3>
+        Flexbox works horizontally and vertically, and the rules change depending which way you want to go. The default direction is horizontal, or row, but can be changed to vertical, or column. This can be applied like: flex-direction: column;
+        <p>No matter what direction you are using, you need to think of flex-containers having 2 axes: the main axes and the cross axes.By changing direction, either to row or column,this this changes the main axes to either left or right, or top to bottom. display: flex on its own will default to horizontal, so adding flex-direction: column after is necessary </p>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            </div>
+<p>Check the CSS style sheet that goes along with this page to see the below list of rules that can be added to the container and item within to manipulate the boxes.  The most common behavior, however, is the default, i.e. justify-content aligns items horizontally (because the main axis defaults to horizontal), and align-items aligns them vertically. One of the biggest sticking points that beginners have with flexbox is confusion when this behavior changes.</p> These are the rules used in the example:
+    <ul>
+        
+        <li>justify-content: space-between/evenly  -  puts padding evenly between items across the main axis</li>
+        <li>justify content: center  -  pushes items to the centre middle across the main axis</li>
+        <li>align-items: center  -  pushes the items together across the cross axis</li>
+        <li>gap: 5px  -  puts a determined space between items. Very reliable</li>
+        <li></li>
+    </ul>
+    
+
      </body>
 </html>
