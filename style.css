@@ -1,23 +1,257 @@
-* {
-    background-color: lightgoldenrodyellow;
-}
+ {
+     background-color: lightgoldenrodyellow;
+ }
 
-body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+ body {
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     display: flex;
+     flex-direction: column;
+     border: px solid;
+     padding: 0px;
+     padding-top: 0px;
+     padding-bottom: 0px;
+     background-color: rgb(12, 12, 74);
 
-h3 {
-    font-size: 32px;
-    font-weight: 700;
-font-stretch: expanded;
-text-align: center 
-}
-h4 {
-    font-size: 28px;
-}
 
-.sub-headers {
-    font-size: 22px;
-    font-weight: 700;
-    }
+ }
 
+ .card1 {
+
+     background-color: rgb(12, 12, 74);
+     margin-bottom: 50px;
+
+ }
+
+ .card2 {
+
+     display: flex;
+     background-color: rgb(12, 12, 74);
+     justify-content: space-around;
+     margin: 20px;
+
+
+ }
+
+ .card3 {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+
+     background-color: white;
+     height: 200px;
+     color: black;
+
+ }
+
+ h3 {
+     color: white;
+ }
+
+ .placeholder {
+     display: flex;
+     text-align: center;
+     font-size: 10px;
+     background-color: grey;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     margin-left: 50px;
+     width: 400px;
+ }
+
+ header {
+     display: flex;
+
+     list-style-type: none;
+     gap: 15px;
+     font-size: 12px;
+     color: white;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     ;
+ }
+
+ .headone {
+     display: flex;
+     flex-grow: 1;
+     font-weight: 700;
+ }
+
+ .left {
+     margin-right: 20px;
+ }
+
+
+ .sub-headers {
+     font-size: 22px;
+     font-weight: 700;
+ }
+
+
+ ul {
+
+     display: flex;
+     border: 2px soli;
+     gap: 20px;
+
+     list-style-type: none;
+     flex-wrap: wrap;
+     flex-direction: column;
+     padding: 0px;
+     margin-top: 0px;
+
+ }
+
+ .smalltextwhite {
+     font-size: 10px;
+     color: white;
+ }
+
+ button {
+     background-color: rgb(102, 188, 250);
+     color: azure;
+     text-align: center;
+     font-size: 10px;
+     font-weight: 700;
+     margin-top: 7px;
+
+ }
+
+ footer {
+
+     display: flex;
+     position: fixed;
+     height: 20px;
+     bottom: 0%;
+     width: 100%;
+
+     justify-content: center;
+     align-items: center;
+ }
+
+ .item1 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-weight: 700;
+     font-size: 22px;
+     margin-top: 20px;
+
+
+ }
+
+ .item2 {
+
+
+     display: flex;
+     flex-wrap: wrap;
+     flex: auto;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-end;
+
+ }
+
+ .wrapper {
+     border: 2px soli;
+     ;
+     gap: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: ;
+     justify-content: ;
+ }
+
+ .card4 {
+
+     display: flex;
+
+     background-color: lightgray;
+     height: 140px;
+     color: black;
+     flex-direction: column;
+
+ }
+
+ .card41 {
+
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     flex-shrink: 1;
+     padding: 30px;
+     padding-bottom: 10px;
+     padding-left: 80px;
+     padding-right: 80px;
+     border: 2px soli;
+ }
+
+ .card42 {
+     color: white;
+     text-align: end;
+     padding-right: 50px;
+     border: 2px soli;
+     padding-right: 50px;
+
+ }
+
+ img {
+     width: 60px;
+     height: auto;
+ }
+
+ .card5 {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     font-weight: 700;
+     height: 140px;
+     background-color: white;
+
+ }
+
+ .card51 {
+     display: flex;
+     justify-content: center;
+
+     background-color: rgb(59, 196, 250);
+     border-radius: 20px;
+     width: 500px;
+     height: 90px;
+     flex-direction: row;
+     margin: 40px;
+ }
+
+ .card56 {
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-wrap: wrap;
+     padding: 50px;
+     flex-grow: 1;
+
+ }
+
+ .card55 {
+     display: flex;
+
+     flex-direction: column;
+     justify-content: center;
+     padding-right: 50px;
+ }
+
+ .card52 {
+
+     color: white;
+     font-weight: 900;
+     font-size: 15px;
+
+ }
+
+ button {
+
+     border-radius: 10px;
+
+ }
