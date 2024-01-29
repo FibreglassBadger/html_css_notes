@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>JavaScript Basics</title>
+</head>
+
+<body>
+    <h3>JavaScript Basics</h3>
+    <script>
+
+        console.log("Hello, World!")
+
+
+        let user = 'John';
+        let age = 25;
+        let message = 'Hello';
+        alert(message);
+
+
+    </script>
+
+    <script>
+
+        let hello = 'Hello world!';
+
+        let pop;
+
+        // copy 'Hello world' from hello into message
+        pop = hello;
+
+        // now two variables hold the same data
+        alert(hello); // Hello world!
+        alert(pop); // Hello world!
+    </script>
+
+    By right clicking the web page and inspecting it, you can find the console.log() under the console tab. This is the
+    command to print something to the developer console in the browser.
+    <p>Another way to add JavaScript into the webpage is to add it using an external script much like the CSS style
+        sheet. ie </p>
+
+    <img src="./images/java-ie.png">
+
+    <br>These are used for more complex scripts.
+
+    <h5>Variables</h5>
+    These are the storage containers for your code.
+    Until recently there was only one to create one and that was the var statement. But in the newest JavaScript
+    versions we have two more ways - let and const. A named variable comes after let
+
+    <p>A variable is a "named storage" for data, you can use let to create that variable.
+        <br><strong>See the raw script for this page to get an understanding</strong>
+        <br>By using the = we can assign data string do the variable let, this can be declared with multiple lines of
+        information ie
+        <br>
+        <br>let user = 'John';
+        <br>let age = 25;
+        <br>let message = 'Hello';
+        <br>
+        <br>A variable should only be declared once or else it will show up an error. The following analogy helps to
+        explain all of it.
+    </p>
+    <img src="./images/var-analogy.png">
+
+    <p>camelCase is often used to name variables and only letter digits or $ or _ can be used. They cannot start with a
+        digit. For example this would be valid.
+        <br>
+        <br>let $ = 1; // declared a variable with the name "$"
+        <br>let _ = 2; // and now a variable with the name "_"
+        <br>
+        <br>alert($ + _); // 3
+        <br>
+        Non latin language can be used but not recommend. Underscore and caps of the same word are two different
+        variables. There are also a list of reserved words, which produce an error when used. Naming things is important
+        and so naming them according to what they are is crucial but also remembering to keep it simple. eg userName,
+        shoppingCart. They need to be descriptive and concise.
+    </p>
+    <p> const are used (instead of let) when you want a variable to stay the same. They cannot be reassigned else an
+        error occurs. This guarantees clear information to everyone. There is a widespread practice to use uppercase
+        constants for difficult to remember values. For example:
+        <br>
+        <br>const COLOR_RED = "#F00";
+        <br>const COLOR_GREEN = "#0F0";
+        <br>const COLOR_BLUE = "#00F";
+        <br>const COLOR_ORANGE = "#FF7F00";
+        <br>
+        <br>// ...when we need to pick a color
+        <br>let color = COLOR_ORANGE;
+        <br>alert(color); // #FF7F00
+        <br>
+    </p>
+    <h5>Numbers</h5>>
+    Numbers play a huge role. The '<u>number</u>' object is an instance which represents all standard numbers. This has
+    number of useful methods to manipulate numbers. Operands are the numbers which need operators to make them function.
+    The list of operators are:
+    <ul>
+        <li>Addition +</li>
+        <li>Subtraction -</li>
+        <li>Multiplication *</li>
+        <li>Division /</li>
+        <li>Remainder % This outputs the remainder of the integer division ie whats left of the number after it been
+            divided</li>
+        <li>Exponentiation ** This raises the number to the power of the one next to it ie 2 ** 5 = 10</li>
+    </ul>
+    Operators are 'unary' if they are coupled with just one operand, and are 'binary' when there are two operands.
+    <br>
+    <br><strong>String concatenation</strong>
+    <br>
+    If the binary + is applied to "strings" then it merges them together. Here are some examples and their answers.
+    <br>
+    <br>let s = "my" + "string";
+    <br>alert(s); // mystring
+    <br>
+    <br>alert(2 + 2 + '1' ); // "41" and not "221"
+    <br>
+    <br>alert('1' + 2 + 2); // "122" and not "14"
+    <br>
+    <br>The binary + is the only operator that supports strings in this way. Other operators work only with numbers and
+    convert their operands to numbers.
+    <br>
+    <br>alert( 6 - '2' ); // 4, converts '2' to a number
+    <br>alert( '6' / '2' ); // 3, converts both operands to numbers
+    <br>
+    <br>
+
+
+
+    <h5>Useful Number Methods</h5>
+    <p>Here are some examples of the most basic number methods that can be done in the browsers console after inspecting
+        the webpage page.</p>
+
+    This will round the number to a fixed number of decimals
+
+    <p>const lotsOfDecimal = 1.766584958675746364;
+        <br> lotsOfDecimal;
+        <br>const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+        <br>twoDecimalPlaces;
+    </p>
+
+    This method converts your data into numbers, particularly useful is if the data has come from a form input, with the
+    input type as text. The way to solve this problem is by passing the string value into the Number(.). constructor.
+    For example, the script below outputs 743, not 77.
+
+    <p>let myNumber = "74";
+        <br>myNumber += 3;
+    </p>
+    This is because "74" is a string so it needs to be put into a number constructor to output 77.
+
+    <p>let myNumber = "74";
+        <br>myNumber = Number(myNumber) + 3;
+    </p>
+    Don't get tripped up by <strong>operator precedence</strong> as some operators are applied before others. Take the example, with num2 having the value of 50 and num1 being 10.
+    <br>
+    <br>num2 + num1 / 8 + 2;
+    <br>
+    <br>As a human being, you may read this as "50 plus 10 equals 60", then "8 plus 2 equals 10", and finally "60 divided by 10 equals 6".
+    <br>
+    <br>But the browser does "10 divided by 8 equals 1.25", then "50 plus 1.25 plus 2 equals 53.25". To override the precedence then parentheses must be used:
+    <br>
+    <br>(num2 + num1) / (8 + 2);
+    <br>
+    
+    <table>
+        <tr>
+          <th>Precedence</th>
+          <th>Name</th>
+          <th>Sign</th>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>unary plus</td>
+          <td>+</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>unary negation</td>
+          <td>-</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>exponentiation</td>
+            <td>**</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>multiplication</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>division</td>
+            <td>/</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>addition</td>
+            <td>+</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>subtraction</td>
+            <td>-</td>
+        </tr>
+            <tr>
+                <td>2</td>
+                <td>assignment</td>
+                <td>=</td>
+            </tr>
+        </tr>
+      </table>
+      <br>
+      <br>As we can see, the “unary plus” has a priority of 14 which is higher than the 11 of “addition” (binary plus). That’s why, in the expression "+apples + +oranges", unary pluses work before the addition.
+      <br>
+    <br><strong>Increment and decrement operators</strong>
+    <br>Sometimes there will be a need to repeatedly subtract or add to a value. Note that this cannot be applied to a number directly. By adding ++ or -- before or after the value will plus or minus that value by 1 respectively 
+    <br>
+    <br> num1++
+    <br>
+    <br>Putting the operators after the value will make the log return the current value then plus it, where as putting it before will do the math then throw out the current value.
+    <br>The operators ++/-- can be used inside expressions as well. Their precedence is higher than most other arithmetical operations.
+    <br>
+    <br>let counter = 1;
+    <br>alert( 2 * ++counter ); // 4
+    <br>
+    <br>Compare with:
+    <br>
+    <br>let counter = 1;
+    <br>alert( 2 * counter++ ); // 2, because counter++ returns the "old" value
+    <br>
+    <br><strong>Assignment operators</strong> assign a value to a variable. let is used in conjunction with a variable such as x or y and that value can then be permanently changed. These are used to help shortcut some code and keep it neater. There are quite a few of them but the basic ones are: <strong>+= -= *= /=</strong>.
+    <br>In all instances it simply means that, say it was plus operator, it would add the value on the right to the variable on the left, then return the new variable value.
+    <br>
+    <br><strong>Comparison operator</strong> are used when we want to run true/false tests, then act accordingly depending on the result of that test.
+    <br>
+  
+    <style>
+        
+        body { font-family: Arial, sans-serif; }
+        table { width: 500px; border-collapse: collapse;  }
+        th, td { padding: 10px; text-align: left; border: 1px solid #000; }
+        th { background-color: #555; color: #fff; }
+        .operator-column { width: 20%; }
+        .examples { font-family: monospace; }
+    </style>
+    <table>
+        <tr>
+            <th class="operator-column">Operator</th>
+            <th>Name</th>
+            <th>Purpose</th>
+            <th class="examples">Example</th>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>Equality</td>
+            <td>Tests whether the left and right values are identical to one another</td>
+            <td class="examples">5 == 2 + 4</td>
+        </tr>
+        <tr>
+            <td>===</td>
+            <td>Strict-Non-equality</td>
+            <td>Tests whether the left and right values are not identical to one another</td>
+            <td class="examples">5 !== 2 + 3</td>
+        </tr>
+        <tr>
+            <td>&lt;</td>
+            <td>Less than</td>
+            <td>Tests whether the left value is smaller than the right one.</td>
+            <td class="examples">10 &lt; 6</td>
+        </tr>
+        <tr>
+            <td>&gt;</td>
+            <td>Greater than</td>
+            <td>Tests whether the left value is greater than the right one.</td>
+            <td class="examples">10 &gt; 20</td>
+        </tr>
+        <tr>
+            <td>&lt;=</td>
+            <td>Less than or equal to</td>
+            <td>Tests whether the left value is smaller than or equal to the right one.</td>
+            <td class="examples">3 &lt;= 2</td>
+        </tr>
+        <tr>
+            <td>&gt;=</td>
+            <td>Greater than or equal to</td>
+            <td>Tests whether the left value is greater than or equal to the right one.</td>
+            <td class="examples">5 &gt;= 4</td>
+        </tr>
+    </table>
+    <br><strong>Modify-in-place</strong>
+We often need to apply an operator to a variable and store the new result in that same variable.
+<br>
+<br>let n = 2;
+<br>n = n + 5;
+<br>n = n * 2;
+<br>This notation can be shortened using the operators += and *=:
+<br>
+<br>let n = 2;
+<br>n += 5; // now n = 7 (same as n = n + 5)
+<br>n *= 2; // now n = 14 (same as n = n * 2)
+<br>alert( n ); // 14
+<br>
+<br>Short “modify-and-assign” operators exist for all arithmetical and bitwise operators: /=, -=, etc.
+<br>
+<br>Such operators have the same precedence as a normal assignment, so they run after most other calculations:
+<br>
+<br>let n = 2;
+<br>n *= 3 + 5; // right part evaluated first, same as n *= 8
+<br>alert( n ); // 16
+<br>
+<br>    
+
+    <p>
+        <a class="text" href="../index.html">Press me to go back to Index</a>
+    </p>
+
+</body>
+
+</html>

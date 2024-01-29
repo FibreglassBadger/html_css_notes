@@ -1,5 +1,5 @@
 * {
-    background-color: lightblue;
+    background-color: peachpuff ;
 }
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -26,9 +26,14 @@ display:inlin;
 
 img {
     padding: 30px;
+    height: auto;
+    width: 400px;
+    
     
     
 }
+
+
 
 .text {
     
@@ -43,3 +48,4 @@ font-weight: 700;
     font-size: 25px;
     display: inline;
 
+}
