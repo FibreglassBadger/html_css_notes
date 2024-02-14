@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
     <meta charset="UTF-8">
     <title>JavaScript Basics</title>
 </head>
@@ -47,7 +48,7 @@
 
     <h5>Variables</h5>
     These are the storage containers for your code.
-    Until recently there was only one to create one and that was the var statement. But in the newest JavaScript
+    Until recently there was only one way to create one and that was the var statement. But in the newest JavaScript
     versions we have two more ways - let and const. A named variable comes after let
 
     <p>A variable is a "named storage" for data, you can use let to create that variable.
@@ -106,7 +107,7 @@
     </ul>
     Operators are 'unary' if they are coupled with just one operand, and are 'binary' when there are two operands.
     <br>
-    <br><strong>String concatenation</strong>
+    <br><strong>String Concatenation</strong>
     <br>
     If the binary + is applied to "strings" then it merges them together. Here are some examples and their answers.
     <br>
@@ -122,10 +123,35 @@
     <br>
     <br>alert( 6 - '2' ); // 4, converts '2' to a number
     <br>alert( '6' / '2' ); // 3, converts both operands to numbers
-    <br>
-    <br>
+    
+    <h5>Strings Strings and more Strings</h5>
+Strings are pieces of text that are words wrapped in single quotes ('), double quotes ("), or backticks (`). These can be declared with a variable and their value returned. Backticks are slightly different as these allow embedding JS and to declare template literals over multiple lines. Javascript strings are primitive and immutable: All string methods produces a new string without altering the original string.
+<p>Embedding is done by JS in ${ } and the result will be included in the string. This can then be used to join variables together.</p>
+const one = "Hello, ";
+<br>const two = "how are you?";
+<br>const joined = `${one}${two}`;
+<br>console.log(joined); // "Hello, how are you?"
+<br>
+<br>The ${ } can only be used with template literals (created using back ticks) and not to concatenate normal string, this can be used to make more readable code. The + operator can be used for normal string.
+<p>To use quotes within strings than other single, double quotes or backticks can be used within the string as long as it doesn't match the original string formation. Back slashes, known as escaping, can be used to include grammar that would normally be seen as a string i.e "I\'ve been a `good` boy". It has to be used just before the character.</p>
+Number(.) converts your data into numbers, particularly useful is if the data has come from a form input, with the
+input type as text. The way to solve this problem is by passing the string value into the Number(.). constructor.
+For example, the script below outputs 743, not 77.
 
+<p>let myNumber = "74";
+    <br>myNumber += 3;
+</p>
+This is because "74" is a string so it needs to be put into a number constructor to output 77.
 
+<p>let myNumber = "74";
+    <br>myNumber = Number(myNumber) + 3;
+</p>
+Conversely, String() will turn any number into a string.
+<p>Methods are bits of functionality that are built into the language of specific data, they allow you to replace and slice strings to obtain a particular outcome. These links below are a good resource to come back to when trying to remember certain methods:
+</p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">List of exhaustive methods</a>
+<br><a href="https://www.w3schools.com/js/js_string_methods.asp">Basic string methods</a>
+<br><a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">JavaScript string reference</a>
 
     <h5>Useful Number Methods</h5>
     <p>Here are some examples of the most basic number methods that can be done in the browsers console after inspecting
@@ -139,18 +165,8 @@
         <br>twoDecimalPlaces;
     </p>
 
-    This method converts your data into numbers, particularly useful is if the data has come from a form input, with the
-    input type as text. The way to solve this problem is by passing the string value into the Number(.). constructor.
-    For example, the script below outputs 743, not 77.
 
-    <p>let myNumber = "74";
-        <br>myNumber += 3;
-    </p>
-    This is because "74" is a string so it needs to be put into a number constructor to output 77.
-
-    <p>let myNumber = "74";
-        <br>myNumber = Number(myNumber) + 3;
-    </p>
+   
     Don't get tripped up by <strong>operator precedence</strong> as some operators are applied before others. Take the example, with num2 having the value of 50 and num1 being 10.
     <br>
     <br>num2 + num1 / 8 + 2;
@@ -308,8 +324,108 @@ We often need to apply an operator to a variable and store the new result in tha
 <br>let n = 2;
 <br>n *= 3 + 5; // right part evaluated first, same as n *= 8
 <br>alert( n ); // 16
+<h3>Conditionals</h3>
+Conditionals allow the program/computer to do more involved things, they define conditions that are either true or false and then executes if that condition is true. In JavaScript we have the following conditional statements:
+<ul>
+    <p><li>Use <strong>if</strong> to specify a block of code to be executed, if a specified condition is true. </li></p>
+
+    <p><li>Use <strong>else</strong> to specify a block of code to be executed, if the same condition is false.
+    <br>if (condition) /* code to run if condition is true */
+    <br>else /* run some other code instead */
+
+</li></p>
+<p><li>Use <strong>if...else</strong> to specify a new condition to test, if the first condition is false.
+    <br>if (condition) {
+        <br>/* code to run if condition is true */
+        <br>} else {
+            <br>/* run some other code instead */
+            <br>}
+            <br>
+            <br>Here is an example of a basic if..else statement:
+            <br>
+            <br>let shoppingDone = false;
+            <br>let childsAllowance;
+            <br>
+            <br>if (shoppingDone === true) {
+                <br>childsAllowance = 10;
+                <br>} else {
+                    <br>childsAllowance = 5;
+                    <br> }
+                    <br>It is perfectly ok to nest if...else statements inside of each other to show even more information. Even though the all works together each if...else statement works completely independently of the other one.
+</li></p>
+<p><li><strong>else if</strong> can be used if you want more than two choices or outcomes. Each additional choice requires an extra block to put between if () and else {}<label for="weather">Select the weather type today: </label>
+        <select id="weather">
+          <option value="">--Make a choice--</option>
+          <option value="sunny">Sunny</option>
+          <option value="rainy">Rainy</option>
+          <option value="snowing">Snowing</option>
+          <option value="overcast">Overcast</option>
+        </select>
+        
+        <p></p> See the linked JS </li></p>
+<p><li>Use <strong>switch</strong> to specify many alternative blocks of code to be executed</li></p>
+<li><a href="https://www.w3schools.com/js/js_if_else.asp">Use this link for better examples</a> </li>
+</ul>
+<h5>Comparisons</h5>
+Comparison operators > < >= <= == === != return a boolean value true or false. They can be assigned to a variable, just like any value:
 <br>
-<br>    
+<br>let result = 5 > 4; // assign the result of the comparison
+<br>alert( result ); // true
+<br>
+<br>Any value that is not false, undefined, null, 0, NaN, or an empty string ('') actually returns true when tested as a conditional statement, therefore you can use a variable name on its own to test whether it is true, or even that it exists (that is, it is not undefined.)
+<br>Strings are compared letter by letter and will go through each letter until it finds a difference. ie alert( 'Glow' > 'Glee' ); // true
+<br>The equality operand == converts string to a number value then shows the result. If a strict operand === is used then no conversion takes place.
+The values null and undefined equal == each other and do not equal any other value.
+Be careful when using comparisons like > or < with variables that can occasionally be null/undefined. Checking for null/undefined separately is a good idea.
+<h5>Logical Operators</h5>
+There are four logical operators in JavaScript || (OR), && (AND), ! (NOT), ?? (Nullish Coalescing). 
+<p><strong>|| (OR)</strong></p>
+This operator checks to see if any arguments are true, if that is the case then it will return true. If that isn't the case then it will always return false. Every argument has to be false for it to return false. It will evaluate operands from left to right and will stop and return its original value upon the first one it comes across. If all operands were false, it will return the last operand. Below are two examples where it is used. In the second example, true is returned straight away so nothing happens then false is skipped and printed is alerted:
+<br>
+<br>let firstName = "";
+<br>let lastName = "";
+<br>let nickName = "SuperCoder";
+<br>
+<br>alert( firstName || lastName || nickName || "Anonymous"); // SuperCoder
+<br>
+<br>true || alert("not printed");
+<br>false || alert("printed");
+
+<p><strong>&& (AND)</strong></p>
+This returns if both operands are true and will return false if otherwise. When it comes to multiple && operators they have the same rules as || OR but will returns the first falsy value instead of the truthy one.
+<br>
+<br>// if the first operand is truthy,
+<br>// AND returns the second operand:
+<br>alert( 1 && 0 ); // 0
+<br>alert( 1 && 5 ); // 5
+<br>
+<br>// if the first operand is falsy,
+<br>// AND returns it. The second operand is ignored
+<br>alert( null && 5 ); // null
+<br>alert( 0 && "no matter what" ); // 0
+<br>
+<br>
+<br>The least one is returned if no falsys were found
+<br>
+<br>alert( 1 && 2 && 3 ); // 3, the last one
+<p>In the hierarchy of precedence AND && sits higher than OR || and will be executed before. Don't use && instead of if. </p>
+<p><strong>! (NOT)</strong></p>
+This operator accepts a single argument and returns a single inverse value. A double !! is sometimes used for converting a value into its boolean value by inversing the value with the first ! then inversing it again with the second !!
+<br>
+<br>alert( !true ); // false
+<br>alert( !0 ); // true
+<br>
+<br>
+<br>alert( !!"non-empty string" ); // true
+<br>alert( !!null ); // false
+<p>The precedence of ! is the highest of all logical operators, so it always execute first.</p>
+
+
+
+
+
+
+
 
     <p>
         <a class="text" href="../index.html">Press me to go back to Index</a>
